@@ -153,8 +153,8 @@
 .widget-title {
     background: @noti-bg-darker;
     padding: 4px 8px;
-    margin: 8px 8px 4px 8px;
     font-size: 1.5rem;
+    margin: 8px 8px 4px 8px;
     border-radius: 6px;
 }
 .widget-title > button {
@@ -162,7 +162,7 @@
     min-width: 22px;
     min-height: 22px;
     border-radius: 6px;
-    padding: 0 11px;
+    padding: 1px 12px;
     text-shadow: none;
     box-shadow: none;
 }
@@ -195,7 +195,7 @@
     min-width: 22px;
     min-height: 22px;
     border-radius: 6px;
-    padding: 0 1px;
+    padding: 1px 1px;
     border: none;
     box-shadow: none;
     outline: none;
