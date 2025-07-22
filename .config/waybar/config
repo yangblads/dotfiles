@@ -39,6 +39,12 @@
         "format": "{}",
         "format-empty": "",
         "max-length": 20,
+        "separate-outputs": false,
+        "rewrite": {
+          "(.*) — Zen Browser": "Zen Browser",
+          "^.*vi( .*|$)": "neovim",
+          "^.*~$": "kitty",  
+        }
     },
 
     "hyprland/workspaces": {
@@ -126,9 +132,8 @@
     "custom/updates": {
         "exec": "~/.config/hypr/scripts/checkupdates.sh",
         "return-type": "json",
-        "interval": 20, // update every 20 seconds
+        "interval": 10, // update every 10 seconds
         "format": "{}",
-        "format-alt": "",
         "tooltip": true,
         "on-click": "~/.config/hypr/scripts/upgrade.sh"
     },
