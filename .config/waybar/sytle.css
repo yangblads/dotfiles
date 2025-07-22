@@ -1,0 +1,178 @@
+* {
+    font-family: "DepartureMono Nerd Font Propo";
+    font-size: 14px;
+    border-radius: 6px;
+    padding: 0; /* Prefer defining padding per-module */
+    margin: 0; /* Prefer defining margin per-module */
+}
+
+button:hover {
+    box-shadow: none; /* Remove predefined box-shadow */
+    text-shadow: none; /* Remove predefined text-shadow */
+    background: none; /* Remove predefined background color (white) */
+    transition: none; /* Disable predefined animations */
+    border-color: transparent; /* Make predefined boder-color transparent*/
+}
+
+#waybar {
+    min-height: 25px;
+}
+#window {
+    background: #2b2b39;
+    margin: 5px 0px 5px 5px;
+    padding: 0 0.5em;
+}
+window#waybar {
+    color: #b1b1b1;
+    background-color: #1a1b26;
+}
+/* make window module transparent when no windows present */
+window#waybar.empty #window {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+#workspaces {
+    background: #2b2b39;
+    margin: 5px 0px 5px 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+#workspaces button {
+    color: #949494;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+}
+#workspaces button.empty {
+    color: #545454;
+}
+#workspaces button.active {
+    color: #d3d3d3;
+}
+#workspaces button:hover {
+    border-color: transparent;
+}
+
+#hardware1 {
+    background: #2b2b39;
+    margin: 5px 0 5px 5px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+#hardware2,
+#hardware3 {
+    background: #2b2b39;
+    margin: 5px 0 5px 5px;
+    padding-left: 0.6em;
+}
+#custom-weather {
+    font-size: 12px;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+}
+
+#custom-updates {
+    font-size: 12px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+#temperature,
+#cpu,
+#memory {
+    padding-left: 0.6em;
+}
+#backlight,
+#network,
+#bluetooth,
+#pulseaudio {
+    padding-right: 0.6em;
+}
+
+#clock {
+    background: #2b2b39;
+    margin: 5px 0 5px 5px;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+}
+
+#custom-notification {
+    background: #2b2b39;
+    color: #b1b1b1;
+    margin: 5px 5px;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+}
+
+#idle_inhibitor,
+#idle_inhibitor.activated,
+#idle_inhibitor.deactivated {
+    background-color: #2b2b39;
+    color: #b1b1b1;
+    margin: 5px 0 5px 5px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+#battery {
+    background-color: #ffffff;
+    color: #000000;
+}
+#battery.charging,
+#battery.plugged {
+    color: #ffffff;
+    background-color: #26a65b;
+}
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#tray {
+    background: #2b2b39;
+    margin: 5px 0 5px 5px;
+    padding: 0 5px;
+}
+#tray menu {
+    background-color: #1a1b26;
+    color: #8b8b8b;
+}
+#tray menu menuitem:hover {
+    background-color: #2b2b39;
+    color: #b1b1b1;
+}
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+#taskbar {
+    margin: 5px 0 5px 5px;
+    background: #2b2b39;
+    padding-left: 0.4em;
+    padding-right: 0.3em;
+}
+#taskbar button,
+#taskbar.empty {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+}
+#taskbar button:hover {
+    background: #2b2b39;
+    padding: 0;
+}
